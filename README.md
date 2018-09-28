@@ -11,9 +11,8 @@ Now, P1 can useBathroom(), then goes out to update turn=0 and drink() all in one
 This means, P1 needs to wait until P0 have to useBathroom() again, wait for a long period of time and finally, once turn=1, be able to useBathroom().
 
 
-[Link](url) and ![Image](src)
+[Link](https://dorian-morones.github.io/taberna-issue/)
 ```
-https://dorian-morones.github.io/taberna-issue/
 
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
