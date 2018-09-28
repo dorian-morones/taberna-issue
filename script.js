@@ -10,6 +10,8 @@ function verificador() {
   } else if (bathroom == 1 && Gus == false) {
     entraGus();
     console.log("Entro gus");
+  }else if(bathroom == 0 && Marco == false && Gus == true){
+    console.log("Gus esta en el baño");
   }
 }
 
@@ -33,8 +35,7 @@ function timerBathroom() {
       console.log("Salio marco");
       bathroom = 1;
       console.log("Bathroom esta libre" + bathroom);
-      Marco = false;
-      Gus = false;
+      drink();
       verificador();
       clearInterval(upLoadtime);
     } else if (timeup == 6 && Gus == true && Marco == false) {
@@ -42,8 +43,7 @@ function timerBathroom() {
       console.log("Salio Gus");
       bathroom = 0;
       console.log("Bathroom esta libre" + bathroom);
-      Gus = false;
-      Marco = false;
+      drink();
       verificador();
       clearInterval(upLoadtime);
     }
@@ -51,5 +51,10 @@ function timerBathroom() {
 }
 
 function drink() {
-  console.log("tomando");
+    if (Marco == true && Gus == false) {
+        Marco = false;
+    }else if(Gus == true && Marco == false){
+        Gus = false;
+    }
+  alert(Marco * Gus);
 }
